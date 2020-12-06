@@ -8,5 +8,6 @@ RUN npm run build
 
 #STAGE 1
 FROM nginx
+EXPOSE 80
 COPY --from=0 /app/build /usr/share/nginx/html
 #nginx container starts on it's own, no need for CMD
